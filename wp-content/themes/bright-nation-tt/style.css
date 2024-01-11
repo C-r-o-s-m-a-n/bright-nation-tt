@@ -1,1 +1,6 @@
-*::after,*::before,*{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;box-sizing:border-box;box-shadow:none}article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}body{font:14px Arial,sans-serif;line-height:1;display:flex;flex-direction:column;width:100%;background-color:#2b2b2b;color:#fff}a,a:hover,input,input:focus,button,button:focus,select:focus{outline:none}.wrapper{width:100%;overflow:hidden;flex:1 0}html{background-color:red;display:flex;min-height:100%}.container{max-width:1200px;padding:0 15px;width:100%;margin:0 auto}.footer{width:100%}img{display:block;max-width:100%;height:auto}a{transition:all .3s;text-decoration:none}.body{background-color:red;display:flex}
+/*
+Theme Name: Bright Nation Tt
+Description: Bright Nation Tt
+Author: Vlad Stotskiy
+Version: 1.0
+*/
