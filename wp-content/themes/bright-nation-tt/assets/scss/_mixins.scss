@@ -1,0 +1,8 @@
+@mixin header-and-footer($bg-color, $height) {
+  background-color: $bg-color;
+  height: $height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

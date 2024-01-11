@@ -1,0 +1,5 @@
+.footer{
+  @include header-and-footer(#3b372f, 50px);
+  border-top: 1px solid rgba(255, 255, 255, 57%);
+  margin-top: 50px
+}

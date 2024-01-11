@@ -1,7 +1,9 @@
 jQuery(function ($) {
 	const modalPlugin = $('#modal-plugin-post-by-date')
 
-	$('.plugin-post-by-date-item__wrap').on('click', function () {
+	//insert data to modal
+	$('.plugin-post-by-date-item__wrap').on('click', function (e) {
+		e.stopPropagation();
 		const img = $(this).find('.plugin-post-by-date-item__thumb img').clone()
 		const title = $(this).find('.plugin-post-by-date-item__title').text()
 		const excerpt = $(this).find('.plugin-post-by-date-item-for-modal__excerpt').text()
@@ -16,9 +18,18 @@ jQuery(function ($) {
 		$('body').css({'overflow':'hidden'})
 	})
 
-	$('.modal-post-by-date__close').on('click', function () {
+	const closeModal = () => {
 		modalPlugin.removeClass('modal-post-by-date--open')
-
 		$('body').css({'overflow':'visible'})
+	}
+
+	$('.modal-post-by-date__close').on('click', function () {
+		closeModal()
 	})
+
+	$(document).on('click', function (e) {
+		if (!$(e.target).closest('.modal-post-by-date__body').length) {
+			closeModal()
+		}
+	});
 })

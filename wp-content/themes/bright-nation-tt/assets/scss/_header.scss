@@ -1,0 +1,5 @@
+.header{
+  @include header-and-footer(#5a5856, 70px);
+  border-bottom: 1px solid rgba(255, 255, 255, 57%);
+  margin-bottom: 50px
+}

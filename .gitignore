@@ -1,3 +1,4 @@
 /.idea
-/wp-content/plugins/posts-by-date/node_modules
+/wp-content/themes/bright-nation-tt/gulp/node_modules
 /bright-nation-tt.zip
+/bright-nation-tt-in-plugin.zip

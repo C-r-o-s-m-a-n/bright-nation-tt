@@ -1,0 +1,24 @@
+{
+  "name": "post-by-date",
+  "author": "Vlad Stotzkyi",
+  "version": "1.0.0",
+  "main": "gulp/gulpfile.js",
+  "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "autoprefixer": "^10.4.16",
+    "babel-loader": "^9.1.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-watch": "^5.0.1",
+    "sass": "^1.69.7",
+    "webpack": "^5.89.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "browserslist": [
+    "last 10 versions",
+    ">5%"
+  ]
+}

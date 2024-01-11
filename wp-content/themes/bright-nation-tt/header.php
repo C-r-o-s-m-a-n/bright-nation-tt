@@ -13,7 +13,7 @@
 <div class="wrapper rounded-section">
 	<header class="header">
 		<div class="container">
-
+			<h2>Header</h2>
 		</div>
 	</header><!-- .header-->
 	<main class="content">

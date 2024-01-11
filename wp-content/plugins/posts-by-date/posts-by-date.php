@@ -6,6 +6,9 @@ Version: 1.0
 Author: Vlad Stozkyi
 */
 
+if(!defined('ABSPATH')){
+  exit;
+}
 require trailingslashit(plugin_dir_path(__FILE__)) . 'inc/enqueue-scripts-style.php';
 
 function post_by_date_show($shortcode_param) {
