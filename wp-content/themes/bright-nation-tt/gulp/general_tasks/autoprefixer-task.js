@@ -7,10 +7,7 @@ const createAutoprefixerTask = (taskName, pathToFiles, outputFolder) =>{
 		const postcss = require('gulp-postcss')
 
 		return gulp.src(pathToFiles)
-			.pipe(postcss([ autoprefixer({
-			            browsers: ['last 2 versions, >5%'],
-			            cascade: false
-			        }) ]))
+			.pipe(postcss([ autoprefixer() ]))
 			.pipe(gulp.dest(outputFolder))
 	})
 }

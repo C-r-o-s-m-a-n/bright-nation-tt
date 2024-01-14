@@ -18,7 +18,6 @@
     "webpack-stream": "^7.0.0"
   },
   "browserslist": [
-    "last 2 versions",
-    "> 5%"
+    "last 2 versions, >5%"
   ]
 }

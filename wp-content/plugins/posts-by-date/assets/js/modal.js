@@ -1,5 +1,6 @@
 jQuery(function ($) {
 	const modalPlugin = $('#modal-plugin-post-by-date')
+	const modalBody = modalPlugin.find('.modal-post-by-date__wrap')
 
 	//close or open modal and animate it
 	const closeOrOpenModal = (open = true) => {
@@ -70,8 +71,6 @@ jQuery(function ($) {
 		const idContent = $(this).data('id-content')
 		const contentForModal = pluginPostByDateArrContentModals[idContent]
 
-		const modalBody = modalPlugin.find('.modal-post-by-date__wrap')
-
 		if (contentForModal){
 			const blockToInsert = newBlockDateForModal(contentForModal)
 			modalBody.html(blockToInsert)
@@ -85,7 +84,7 @@ jQuery(function ($) {
 
 
 	//click to "close icon" in modal
-	$('.modal-post-by-date__wrap').on('click', '.modal-post-by-date__close', function () {
+	modalBody.on('click', '.modal-post-by-date__close', function () {
 		closeOrOpenModal(false)
 	})
 
