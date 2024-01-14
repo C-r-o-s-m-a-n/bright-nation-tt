@@ -1,27 +1,13 @@
 const gulp = require('gulp')
-const sass = require('gulp-sass')(require('sass'))
 const webpack = require('webpack-stream')
-const watch = require('gulp-watch')
-
+const {createAutoprefixerTask} = require('./general_tasks/autoprefixer-task.js')
+const {createSassTask} = require('./general_tasks/sass-task.js')
 
 //autoprefixer
-gulp.task('autoprefixerPostByDate', function (){
-	const autoprefixer = require('autoprefixer')
-	const postcss = require('gulp-postcss')
-
-	return gulp.src('../../../plugins/posts-by-date/assets/css/*.css')
-		.pipe(postcss([ autoprefixer() ]))
-		.pipe(gulp.dest('../../../plugins/posts-by-date/assets/css'))
-})
+createAutoprefixerTask('autoprefixerPostByDate', '../../../plugins/posts-by-date/assets/css/*.css', '../../../plugins/posts-by-date/assets/css')
 
 // Sass
-gulp.task('sassPostByDate', function (done) {
-	gulp.src('../../../plugins/posts-by-date/assets/scss/*.scss')
-		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-		.pipe(gulp.dest('../../../plugins/posts-by-date/assets/css'));
-
-	done();
-});
+createSassTask('sassPostByDate', '../../../plugins/posts-by-date/assets/scss/*.scss', '../../../plugins/posts-by-date/assets/css')
 
 gulp.task('webpackPostByDate', function () {
 	return gulp.src('../../../plugins/posts-by-date/assets/js/main.js')
@@ -50,7 +36,7 @@ gulp.task('webpackPostByDate', function () {
 });
 
 gulp.task('watchPostByDate', function () {
-	gulp.watch('../../../plugins/posts-by-date/assets/scss/**/*.scss', gulp.series('sassPostByDate'));
+	gulp.watch('../../../plugins/posts-by-date/assets/scss/**/*.scss', gulp.series('sassPostByDate', 'autoprefixerPostByDate'));
 	gulp.watch(['../../../plugins/posts-by-date/assets/js/**/*.js', '!../../../plugins/posts-by-date/assets/js/bundle.js'], gulp.series('webpackPostByDate'));
 });
 

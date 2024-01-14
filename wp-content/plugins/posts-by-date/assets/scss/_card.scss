@@ -26,6 +26,8 @@
     &__thumb{
       height: 350px;
       position: relative;
+      border-bottom: 1px solid rgba(255,255,255,.57);
+      background-color: #fff;
       img{
         object-fit: cover;
         object-position: center;

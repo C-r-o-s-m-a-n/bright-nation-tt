@@ -33,13 +33,18 @@ function post_by_date_show($shortcode_param) {
 
   $query = new WP_Query($args);
 
-  if ($query->have_posts()):?>
+  if ($query->have_posts()):
+	$index_for_arr_content_modals = 0;
+	$arr_content_modals = []?>
     <div class="plugin-post-by-date">
       <?php while ($query->have_posts()):
         $query->the_post();
         include trailingslashit(plugin_dir_path(__FILE__)).'template-part/card.php'?>
       <?php endwhile;
       wp_reset_postdata()?>
+		<script>
+			const pluginPostByDateArrContentModals = <?php echo json_encode($arr_content_modals)?>;
+		</script>
     </div>
   <?php else:
     echo 'Posts not found.';

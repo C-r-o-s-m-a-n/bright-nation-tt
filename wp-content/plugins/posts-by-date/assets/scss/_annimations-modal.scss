@@ -1,0 +1,96 @@
+//left
+@keyframes modal-from-left {
+  from{
+    left: -100vw;
+  }
+  to{
+    left: 0;
+  }
+}
+
+//right
+@keyframes modal-from-right {
+  from{
+    right: -100vw;
+    left: unset;
+  }
+  to{
+    right: 0;
+    left: unset;
+  }
+}
+
+//top
+@keyframes modal-from-top {
+  from{
+    top: -100vh;
+    left: 0;
+  }
+  to{
+    top: 0;
+    left: 0;
+  }
+}
+
+//bottom
+@keyframes modal-from-bottom {
+  from{
+    bottom: -100vh;
+    left: 0;
+    top: unset;
+  }
+  to{
+    bottom: 0;
+    left: 0;
+    top: unset;
+  }
+}
+
+
+//close to left
+@keyframes modal-close-to-left {
+  from{
+    left: 0;
+  }
+  to{
+    left: -100vw;
+  }
+}
+
+//close to right
+@keyframes modal-close-to-right {
+  from{
+    right: 0;
+    left: unset;
+  }
+  to{
+    right: -100vw;
+    left: unset;
+  }
+}
+
+//close to top
+@keyframes modal-close-to-top {
+  from{
+    top: 0;
+    left: 0;
+  }
+  to{
+    top: -100vh;
+    left: 0;
+  }
+}
+
+//close to bottom
+@keyframes modal-close-to-bottom {
+  from{
+    bottom: 0;
+    left: 0;
+    top: unset;
+  }
+  to{
+    bottom: -100vh;
+    left: 0;
+    top: unset;
+  }
+}
